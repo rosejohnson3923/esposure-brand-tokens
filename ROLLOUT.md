@@ -2,12 +2,17 @@
 
 Status of consuming the shared token layer in each of the 4 portfolio sites.
 
-| Site | Stack | Status | Branch / PR |
+| Site | Stack | Status | Branch / deploy |
 |---|---|---|---|
-| pathfinity-website | React/Vite | ✅ **Piloted** — wired, build verified | `marketing/brand-tokens` (not yet merged to `master`) |
-| pathcte-website | React/Vite | ⬜ Pending | — |
-| esposure-website | static HTML | ⬜ Pending | — |
-| esposure4all-website | static HTML | ⬜ Pending | — |
+| pathfinity-website | React/Vite | ✅ **Live in production** — merged + Netlify-deployed; `--glass-blur` confirmed in the live bundle | `master` |
+| pathcte-website | React/Vite | ✅ Wired + build-verified | `marketing/brand-tokens` (not merged) |
+| esposure-website | static HTML | ✅ Wired (vendored CSS + `<link>`s) | `marketing/brand-tokens` (not merged) |
+| esposure4all-website | static HTML | ✅ Wired (vendored CSS + e4a overlay) | `marketing/brand-tokens` (not merged) |
+
+> The 3 non-pilot sites are wired on `marketing/brand-tokens` branches, pushed but
+> **not merged to `master`** — merge each to deploy to production. The static sites
+> load the token CSS **before** `styles.css`, so the existing `:root` blocks still
+> win → purely additive, zero visual change until the cleanup pass prunes them.
 
 The pilot proved the mechanism: `github:` npm dependency → `@import
 '@esposure/brand-tokens/css'` resolves in Vite → build green → bundle is a strict
