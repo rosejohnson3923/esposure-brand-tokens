@@ -80,14 +80,23 @@ family; it doesn't ship the font).
 
 ---
 
-## Cleanup once all 4 are migrated
+## Cleanup status
 
-- Delete the now-dead `src/styles/MasterTheme.css` and `src/styles/themes/` from both
-  React repos.
-- Remove the duplicated brand assets (`esposure-logo-*.png`, `pathfinity-logo-*.png`,
-  `companions/*`) from each site's `public/`/`assets/` and reference the package's
-  `assets/` (React) or copy them in the `sync:tokens` step (static).
-- Drop the `pathcte-website` → `pathfinity-website` `node_modules` symlink.
+- ✅ **Deleted dead `src/styles/MasterTheme.css` + `src/styles/themes/`** from both React
+  repos (no longer imported after the swap; build output byte-identical — verified).
+- ✅ **Deduped static `styles.css` `:root`** — removed the tokens the brand overlay already
+  provides identically (esposure: 5; esposure4all: 15), verified token-by-token via a
+  `(name,value)` comparator. **Collisions intentionally kept** (they'd regress the site):
+  esposure4all `--text-primary: #000` (vs core `#111827`), `--gradient-primary` (black vs
+  purple), the `--font-primary/secondary` fallback chains; esposure `--card-padding: 2rem`
+  (vs core `1.5rem`). Site-specific tokens (`--font-family`, spacing, `--container-max-width`)
+  also kept. These are NOT true duplicates — fully consolidating them would mean renaming the
+  sites' CSS variables to the package's names, a larger refactor deferred as low-value.
+- ⏭ **Deduplicate brand assets** (`esposure-logo-*.png`, `pathfinity-logo-*.png`,
+  `companions/*`) out of each site and reference the package's `assets/` — not yet done.
+- ⏭ **Drop the `pathcte-website` → `pathfinity-website` `node_modules` symlink** — left as-is:
+  it works, Netlify does its own clean install, and replacing it is a heavy local-only
+  install with no production benefit.
 
 ## Asset-size follow-up (optional)
 
