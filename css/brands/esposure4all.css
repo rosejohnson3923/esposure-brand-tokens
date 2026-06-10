@@ -1,0 +1,44 @@
+/**
+ * @esposure/brand-tokens — ESPOSURE4ALL brand overlay
+ * ===================================================
+ * Load AFTER brand-tokens.css. Esposure4All (the 501(c)3 nonprofit) extends the
+ * shared core with a red accent system and the Poppins display font, and
+ * re-tints the glass border off the red accent.
+ *
+ * Extracted from esposure4all-website/assets/css/styles.css :root.
+ */
+
+:root {
+  /* ==== ESPOSURE4ALL ACCENT SYSTEM (red + magenta blend) ==== */
+  --accent-red: #dc2626;
+  --red-light: #f87171;
+  --red-medium: #ef4444;
+  --red-dark: #b91c1c;
+
+  --purple-light: #a78bfa;
+  --purple-medium: #8b5cf6;
+  --purple-dark: #6d28d9;
+
+  --magenta-light: #f472b6;
+  --magenta-medium: #ec4899;
+  --magenta-dark: #be185d;
+
+  /* ==== ESPOSURE4ALL STRATEGIC GRADIENTS ==== */
+  --gradient-impact-primary: linear-gradient(135deg, #000000 0%, #333333 100%);
+  --gradient-red: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  --gradient-red-purple: linear-gradient(135deg, #dc2626 0%, #ec4899 50%, #8b5cf6 100%);
+  --gradient-purple-red: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #dc2626 100%);
+  --gradient-sunset: linear-gradient(135deg, #f87171 0%, #ec4899 25%, #a78bfa 75%, #8b5cf6 100%);
+  --gradient-impact: linear-gradient(135deg, #b91c1c 0%, #be185d 50%, #6d28d9 100%);
+
+  /* ==== TYPOGRAPHY (Poppins display + Inter body) ==== */
+  --font-primary: 'Poppins', var(--font-sans);
+  --font-secondary: 'Inter', var(--font-sans);
+
+  /* ==== GLASS re-tint off the red accent ==== */
+  --glass-border: rgba(220, 38, 38, 0.2); /* --accent-red @ 20% */
+}
+
+:root[data-theme="dark"] {
+  --glass-border: rgba(220, 38, 38, 0.12);
+}

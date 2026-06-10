@@ -1,0 +1,37 @@
+{
+  "name": "@esposure/brand-tokens",
+  "version": "1.0.0",
+  "description": "Canonical design tokens (colors, typography, spacing, shadows, radii, glassmorphism) and shared brand assets for the Esposure web portfolio: Pathfinity + PathCTE (React/Vite) and Esposure + Esposure4All (static HTML).",
+  "license": "UNLICENSED",
+  "private": false,
+  "author": "Esposure",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosejohnson3923/esposure-brand-tokens.git"
+  },
+  "type": "module",
+  "main": "./tokens/index.js",
+  "module": "./tokens/index.js",
+  "types": "./tokens/index.d.ts",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./tokens/index.d.ts",
+      "import": "./tokens/index.js",
+      "default": "./tokens/index.js"
+    },
+    "./css": "./css/brand-tokens.css",
+    "./css/brands/esposure": "./css/brands/esposure.css",
+    "./css/brands/esposure4all": "./css/brands/esposure4all.css",
+    "./assets/*": "./assets/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "css",
+    "tokens",
+    "assets",
+    "README.md"
+  ]
+}
