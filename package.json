@@ -1,6 +1,6 @@
 {
   "name": "@esposure/brand-tokens",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Canonical design tokens (colors, typography, spacing, shadows, radii, glassmorphism) and shared brand assets for the Esposure web portfolio: Pathfinity + PathCTE (React/Vite) and Esposure + Esposure4All (static HTML).",
   "license": "UNLICENSED",
   "private": false,

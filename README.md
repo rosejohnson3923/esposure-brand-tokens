@@ -78,6 +78,29 @@ Static sites can't `import`, so add a tiny copy step that pulls the CSS out of
 
 ## Shared assets
 
+### Pathfinity logo — FINAL art (2026-09-10)
+
+The Pathfinity mark is a mortarboard whose tassel opens into an infinity loop (beaded-tassel
+variant, as in the designer's presentation). Brand purple `#8b5cf6`. Source files (AI/EPS/PDF,
+JPEG/PNG exports, social-media kit, the WHY8 Foundation set) stay in
+`pathfinity-app/docs/Brand Logos/`; **these are the production slots every surface points at:**
+
+| File | What | Use |
+|---|---|---|
+| `assets/logos/pathfinity-mark.svg` | the symbol, `fill="currentColor"` (698.49 × 349.85, ≈2:1) | inline in React/HTML where the colour should follow the theme |
+| `assets/logos/pathfinity-mark-{purple,white,black}.svg` | the symbol, fixed colour | `<img>` tags (an `<img>` cannot recolour `currentColor`) |
+| `assets/logos/pathfinity-lockup.svg` + `-{purple,white,black}` | symbol + PATHFINITY wordmark (outlined paths, no font) | sign-in pages, cards, documents |
+| `assets/logos/pathfinity-favicon.svg` | square viewBox, purple mark, transparent | `<link rel="icon" type="image/svg+xml">` |
+| `assets/logos/pathfinity-favicon-{32,192,512}.png` · `pathfinity-apple-touch-180.png` | raster favicons cut from the designer's 6× PNG (apple-touch is opaque white) | PNG icon links, PWA manifests |
+
+**The art is not square.** Size by height and let width follow (`h-10 w-auto`); a square box
+letterboxes it. The React surfaces (`pathfinity-website`, `pathfinity-platform/apps/pathfinity`)
+carry an inline `BrandMark.tsx` generated from `pathfinity-mark.svg` / `pathfinity-lockup.svg`
+(props `variant` · `tone` · `product`); regenerate both copies together when the art changes.
+PathCTE keeps `pathcte-brandmark.svg` (the interim "P" tile) until its own art is delivered.
+The temporary `pathfinity-logo-metallic-dark.png` placeholder was removed in 1.1.0.
+
+
 `assets/logos/` and `assets/companions/` hold the brand artwork that was
 previously duplicated across all four repos. Reference via the package
 (`@esposure/brand-tokens/assets/logos/...` in React) or copy alongside the CSS
