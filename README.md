@@ -90,8 +90,9 @@ JPEG/PNG exports, social-media kit, the WHY8 Foundation set) stay in
 | `assets/logos/pathfinity-mark.svg` | the symbol, `fill="currentColor"` (698.49 × 349.85, ≈2:1) | inline in React/HTML where the colour should follow the theme |
 | `assets/logos/pathfinity-mark-{purple,white,black}.svg` | the symbol, fixed colour | `<img>` tags (an `<img>` cannot recolour `currentColor`) |
 | `assets/logos/pathfinity-lockup.svg` + `-{purple,white,black}` | symbol + PATHFINITY wordmark (outlined paths, no font) | sign-in pages, cards, documents |
-| `assets/logos/pathfinity-favicon.svg` | square viewBox, purple mark, transparent | `<link rel="icon" type="image/svg+xml">` |
-| `assets/logos/pathfinity-favicon-{32,192,512}.png` · `pathfinity-apple-touch-180.png` | raster favicons cut from the designer's 6× PNG (apple-touch is opaque white) | PNG icon links, PWA manifests |
+| `assets/logos/pathfinity-favicon.svg` | square viewBox, **BLACK** mark, transparent, **no padding** (1.1.1 — the purple mark read as a thin strip on a light tab bar) | `<link rel="icon" type="image/svg+xml">` |
+| `assets/logos/pathfinity-favicon-{32,192,512}.png` · `pathfinity-apple-touch-180.png` | raster favicons cut from the designer's 6× black PNG (apple-touch is opaque white) | PNG icon links, PWA manifests |
+| `assets/logos/pathfinity-favicon-purple*.{svg,png}` · `pathfinity-apple-touch-purple-180.png` | the 1.1.0 purple set, kept for a dark tab bar if ever wanted | — |
 
 **The art is not square.** Size by height and let width follow (`h-10 w-auto`); a square box
 letterboxes it. The React surfaces (`pathfinity-website`, `pathfinity-platform/apps/pathfinity`)
