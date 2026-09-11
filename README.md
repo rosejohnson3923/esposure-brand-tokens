@@ -98,7 +98,7 @@ JPEG/PNG exports, social-media kit, the WHY8 Foundation set) stay in
 letterboxes it. The React surfaces (`pathfinity-website`, `pathfinity-platform/apps/pathfinity`)
 carry an inline `BrandMark.tsx` generated from `pathfinity-mark.svg` / `pathfinity-lockup.svg`
 (props `variant` · `tone` · `product`); regenerate both copies together when the art changes.
-PathCTE keeps `pathcte-brandmark.svg` (the interim "P" tile) until its own art is delivered.
+PathCTE wears the SAME mark (founder ruling 2026-09-11): the symbol alone beside the product name set in text — there is no separate PathCTE tile; the interim `pathcte-brandmark.svg` "P" tile was retired in 1.1.2.
 The temporary `pathfinity-logo-metallic-dark.png` placeholder was removed in 1.1.0.
 
 
