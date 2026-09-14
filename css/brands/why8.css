@@ -1,0 +1,57 @@
+/**
+ * @esposure/brand-tokens — WHY8 FOUNDATION brand overlay
+ * ======================================================
+ * Load AFTER brand-tokens.css. WHY8 Foundation is black & white with the shared
+ * Pathfinity purple as the ONLY accent (founder ruling 2026-09-14: "WHY8 brand
+ * colors are Black & White, with purple as accent. The logos follow this
+ * guideline"). The site is cut from the esposure4all-website mould, whose
+ * stylesheet reads the esposure4all overlay's --accent-red / --gradient-* names;
+ * this overlay defines the SAME names so the mould's rules resolve to purple
+ * and neutrals without a stylesheet fork. Colours and fonts only — nothing
+ * private belongs in this public repository.
+ */
+
+:root {
+  /* ==== WHY8 FOUNDATION NEUTRALS ==== */
+  --primary-black: #000000;
+  --primary-white: #ffffff;
+  --charcoal: #111111;
+  --graphite: #1a1a1a;
+  --light-gray: #f5f5f5;
+  --medium-gray: #808080;
+
+  /* ==== THE ONE ACCENT: Pathfinity purple (core --color-primary) ==== */
+  --purple-light: #a78bfa;
+  --purple-medium: #8b5cf6;
+  --purple-dark: #6d28d9;
+
+  /* The esposure4all mould reads these "red" names — WHY8 resolves them to purple. */
+  --accent-red: #8b5cf6;
+  --red-light: #a78bfa;
+  --red-medium: #8b5cf6;
+  --red-dark: #6d28d9;
+
+  /* Magenta names kept for the mould; WHY8 pins them to the purple ladder. */
+  --magenta-light: #a78bfa;
+  --magenta-medium: #8b5cf6;
+  --magenta-dark: #6d28d9;
+
+  /* ==== GRADIENTS: black ground, purple accent — never a second hue ==== */
+  --gradient-impact-primary: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  --gradient-red: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  --gradient-red-purple: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #a78bfa 100%);
+  --gradient-purple-red: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #6d28d9 100%);
+  --gradient-sunset: linear-gradient(135deg, #000000 0%, #1a1a1a 60%, #6d28d9 100%);
+  --gradient-impact: linear-gradient(135deg, #000000 0%, #111111 50%, #6d28d9 100%);
+
+  /* ==== TYPOGRAPHY (Poppins display + Inter body, as the mould) ==== */
+  --font-primary: 'Poppins', var(--font-sans);
+  --font-secondary: 'Inter', var(--font-sans);
+
+  /* ==== GLASS re-tint off the purple accent ==== */
+  --glass-border: rgba(139, 92, 246, 0.2); /* --purple-medium @ 20% */
+}
+
+:root[data-theme="dark"] {
+  --glass-border: rgba(139, 92, 246, 0.12);
+}

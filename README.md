@@ -8,6 +8,7 @@ Canonical design tokens and shared brand assets for the **Esposure web portfolio
 | pathcte.com (`pathcte-website`) | React + Vite | `@esposure/brand-tokens/css` + brand defaults |
 | esposure.gg (`esposure-website`) | static HTML | copied `brand-tokens.css` + `css/brands/esposure.css` |
 | esposure4all.org (`esposure4all-website`) | static HTML | copied `brand-tokens.css` + `css/brands/esposure4all.css` |
+| why8.org (`why8-website`) | static HTML | copied `brand-tokens.css` + `css/brands/why8.css` (black & white, purple accent) |
 
 One source of truth for colors, gradients, shadows, spacing, typography, radii,
 z-index, blur primitives, **glassmorphism** (`--glass-*`), and component tokens.
